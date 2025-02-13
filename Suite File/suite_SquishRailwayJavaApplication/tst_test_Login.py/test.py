@@ -4,7 +4,6 @@ source(findFile("scripts", "Login.py"))
 source(findFile("scripts", "CommonFunctions.py"))
 
 
-@allure.story('Login')
 def main():
     # Load test data from JSON file
     json_file_path = r"C:\Users\SpanIdea\OneDrive\Desktop\Squish Automation\Scripts\DataFile\LoginData.json"
