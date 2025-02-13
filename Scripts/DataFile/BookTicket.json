@@ -1,0 +1,22 @@
+{
+    "BookTicket": [
+        {
+            "FullName": "Test",
+            "Email": "Test.com",
+            "Time": "10",
+            "Train Name": "Test Train",
+            "Starting From": "Test Source",
+            "Destination": "Test Destination",
+            "Expected Message": "Ticket is booked sucessfully."
+        },
+        {
+            "FullName": "Test1",
+            "Email": "Test.com1",
+            "Time": "101",
+            "Train Name": "Test Train1",
+            "Starting From": "Test Source1",
+            "Destination": "Test Destination1",
+            "Expected Message": "Ticket is booked sucessfullys."
+        }
+    ]
+}
