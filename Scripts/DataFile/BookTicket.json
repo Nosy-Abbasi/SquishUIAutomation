@@ -18,5 +18,16 @@
             "Destination": "Test Destination1",
             "Expected Message": "Ticket is booked sucessfullys."
         }
+    ],
+    
+    "CancleButton": [
+        {
+            "FullName": "Test",
+            "Email": "Test.com",
+            "Time": "10",
+            "Train Name": "Test Train",
+            "Starting From": "Test Source",
+            "Destination": "Test Destination"
+        }
     ]
 }

@@ -4,8 +4,6 @@ from squish import *
 import sys
 import os
 
-names_path = r"C:\Users\SpanIdea\OneDrive\Desktop\Squish Automation\Suite File\suite_SquishRailwayJavaApplication\shared\scripts"
-
 import names
 
 def launch_application():
