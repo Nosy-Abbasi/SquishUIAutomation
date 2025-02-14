@@ -12,17 +12,23 @@ def main():
         data = json.load(file)   
     
     # Loop through the tickets data
-    for ticket in data["BookTicket"]:
-        Expected_Message = ticket["Expected Message"]
+    def test_booking_submit():
         
-        # Execute actions
-        launch_application()  
-        fill_booking_form(ticket)  
-        verify_booking(Expected_Message)  
-        
-    for ticket1 in data["CancleButton"]:
-        
-        # Execute actions
-        launch_application()  
-        Cancle_button_Working(ticket1)  
+        for ticket in data["BookTicket"]:
+            
+            # Execute actions
+            launch_application()  
+            fill_booking_form(ticket)
+    
+    def test_cancle_button():    
+        for ticket1 in data["CancleButton"]:
+            
+            # Execute actions
+            launch_application()  
+            Cancle_button_Working(ticket1)  
+    
+    test_booking_submit()
+    test_cancle_button()
+            
+
          

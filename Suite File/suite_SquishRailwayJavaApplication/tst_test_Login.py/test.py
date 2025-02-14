@@ -11,11 +11,13 @@ def main():
     with open(json_file_path, "r", encoding="utf-8") as file:
         data = json.load(file)
     
+    def test_login():
     # Loop through the tickets data
-    for ticket in data["Login"]:
-        Expected_Message = ticket["Expected Message"]
-        
-        # Execute actions
-        launch_application()  
-        Login(ticket)
-        verify_login(Expected_Message) 
+        for ticket in data["Login"]:
+            
+            # Execute actions
+            launch_application()  
+            LoginFunctionlity(ticket)
+            
+    #Calling Functions        
+    test_login()

@@ -1,7 +1,7 @@
 {
     "BookTicket": [
         {
-            "FullName": "Test",
+            "Full Name": "Test",
             "Email": "Test.com",
             "Time": "10",
             "Train Name": "Test Train",
@@ -10,7 +10,7 @@
             "Expected Message": "Ticket is booked sucessfully."
         },
         {
-            "FullName": "Test1",
+            "Full Name": "Test1",
             "Email": "Test.com1",
             "Time": "101",
             "Train Name": "Test Train1",
@@ -22,7 +22,7 @@
     
     "CancleButton": [
         {
-            "FullName": "Test",
+            "Full Name": "Test",
             "Email": "Test.com",
             "Time": "10",
             "Train Name": "Test Train",

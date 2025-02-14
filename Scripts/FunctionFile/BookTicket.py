@@ -4,82 +4,56 @@ from squish import *
 import sys
 import os
 
-
 import names
+import BookingTicketLocators
+
 
 def fill_booking_form(data):
     # Fill out the booking form with data
-    mouseClick(waitForObjectExists(names.book_Tickets_JButton))
-    test.log("Button Clicked - Book Tickets")
+    Click(BookingTicketLocators.book_Tickets,"Booking button")
+    
+    Enter_Text(BookingTicketLocators.Full_Name,data["Full Name"])
+    
+    Enter_Text(BookingTicketLocators.Email_Id,data["Email"])
+    
+    Click(BookingTicketLocators.Day_RadioButton," Radio button - Shift - Day")
+    
+    Enter_Text(BookingTicketLocators.Time,data["Time"])
+    
+    Enter_Text(BookingTicketLocators.Train_Name,data["Train Name"])
+    
+    Enter_Text(BookingTicketLocators.Starting_From,data["Starting From"])
+    
+    Enter_Text(BookingTicketLocators.Destination,data["Destination"])
+    
+    Click(BookingTicketLocators.Add_Button,"Add button")
+    
+    Click(BookingTicketLocators.Yes_Button,"Yes button")
+    
+    Text_Verification(BookingTicketLocators.message_Ticket_is_booked_sucessfully,data["Expected Message"])
 
-    type(waitForObject(names.booking_Panel_Full_Name_JTextArea), data["FullName"])
-    test.log("Entered text - Full Name")
 
-    type(waitForObject(names.booking_Panel_Email_Id_JTextArea), data["Email"])
-    test.log("Entered text - Email ID")
-
-    mouseClick(waitForObjectExists(names.booking_Panel_Day_JRadioButton))
-    test.log("Button Clicked - Shift Day")
-
-    type(waitForObject(names.booking_Panel_Time_JTextArea), data["Time"])
-    test.log("Entered text - Time")
-
-    type(waitForObject(names.booking_Panel_Train_Name_JTextArea), data["Train Name"])
-    test.log("Entered text - Train Name")
-
-    type(waitForObject(names.booking_Panel_Starting_From_JTextArea), data["Starting From"])
-    test.log("Entered text - Starting From")
-
-    type(waitForObject(names.booking_Panel_Destination_JTextArea), data["Destination"])
-    test.log("Entered text - Destination")
-
-    mouseClick(waitForObjectExists(names.booking_Panel_Add_JButton))
-    test.log("Button Clicked - Add")
-
-    mouseClick(waitForObjectExists(names.select_an_Option_Yes_JButton))
-    test.log("Button Clicked - Yes")
-
-def verify_booking(Expected_Message):
-    # Verify if the ticket booking is successful
-    Actual_Message = waitForObjectExists(names.message_Ticket_is_booked_sucessfully_JLabel).text
-    test.log(f"{Actual_Message}")
-
-    if Expected_Message in Actual_Message:
-        test.passes("Test Passed")
-    else:
-        test.log(f"Test Failed: Expected '{Expected_Message}', but got '{Actual_Message}'"); saveDesktopScreenshot("FailedScreen.png"); test.fail("Test Failed")
-        
 def Cancle_button_Working(data):
-    # Fill out the booking form with data
-    mouseClick(waitForObjectExists(names.book_Tickets_JButton))
-    test.log("Button Clicked - Book Tickets")
     
-    type(waitForObject(names.booking_Panel_Full_Name_JTextArea), data["FullName"])
-    test.log("Entered text - Full Name")
-
-    type(waitForObject(names.booking_Panel_Email_Id_JTextArea), data["Email"])
-    test.log("Entered text - Email ID")
-
-    mouseClick(waitForObjectExists(names.booking_Panel_Day_JRadioButton))
-    test.log("Button Clicked - Shift Day")
-
-    type(waitForObject(names.booking_Panel_Time_JTextArea), data["Time"])
-    test.log("Entered text - Time")
-
-    type(waitForObject(names.booking_Panel_Train_Name_JTextArea), data["Train Name"])
-    test.log("Entered text - Train Name")
-
-    type(waitForObject(names.booking_Panel_Starting_From_JTextArea), data["Starting From"])
-    test.log("Entered text - Starting From")
-
-    type(waitForObject(names.booking_Panel_Destination_JTextArea), data["Destination"])
-    test.log("Entered text - Destination")
-
-    mouseClick(waitForObjectExists(names.booking_Panel_Add_JButton))
-    test.log("Button Clicked - Add")
+    Click(BookingTicketLocators.book_Tickets,"Booking button")
     
-    mouseClick(waitForObjectExists(names.select_an_Option_No_JButton))
-    test.log("Button Clicked - No")
+    Enter_Text(BookingTicketLocators.Full_Name,data["Full Name"])
+    
+    Enter_Text(BookingTicketLocators.Email_Id,data["Email"])
+    
+    Click(BookingTicketLocators.Day_RadioButton," Radio button - Shift - Day")
+    
+    Enter_Text(BookingTicketLocators.Time,data["Time"])
+    
+    Enter_Text(BookingTicketLocators.Train_Name,data["Train Name"])
+    
+    Enter_Text(BookingTicketLocators.Starting_From,data["Starting From"])
+    
+    Enter_Text(BookingTicketLocators.Destination,data["Destination"])
+    
+    Click(BookingTicketLocators.Add_Button,"Add button")
+    
+    Click(BookingTicketLocators.No_Button,"No button")
     
     test.passes("Test Passed")
     
