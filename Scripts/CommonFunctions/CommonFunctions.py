@@ -4,9 +4,9 @@ from squish import *
 import sys
 import os
 
-def launch_application():
+def launch_application(AppName):
     # Start the application
-    startApplication("railway.jar")
+    startApplication(AppName)
     snooze(0.3)
     test.log("App Launch Successfully")
     
