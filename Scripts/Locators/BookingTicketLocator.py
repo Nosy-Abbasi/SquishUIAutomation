@@ -25,4 +25,9 @@ message_JDialog = {"caption": "Message", "type": "javax.swing.JDialog", "visible
 message_OK_JButton = {"caption": "OK", "name": "OptionPane.button", "type": "javax.swing.JButton", "visible": True, "window": message_JDialog}
 message_Ticket_is_booked_sucessfully = {"caption": "Ticket is booked sucessfully.", "name": "OptionPane.label", "type": "javax.swing.JLabel", "visible": True, "window": message_JDialog}
 No_Button = {"caption": "No", "name": "OptionPane.button", "type": "javax.swing.JButton", "visible": True, "window": select_an_Option_JDialog}
+booking_Panel_Add = {"caption": "Booking Panel", "type": "Admin.Add", "visible": True}
+booking_Panel_DD_MM_YYYY_JLabel = {"caption": "DD/MM/YYYY", "type": "javax.swing.JLabel", "visible": True, "window": booking_Panel_Add}
+DD_ComboBox = {"caption": "", "leftWidget": booking_Panel_DD_MM_YYYY_JLabel, "type": "javax.swing.plaf.metal.MetalComboBoxButton", "visible": True, "window": booking_Panel_Add}
+booking_Panel_ComboBox_list_JList = {"basetype": "javax.swing.JList", "name": "ComboBox.list", "visible": True, "window": booking_Panel_Add}
+list_12_ListItem = {"caption": 12, "container": booking_Panel_ComboBox_list_JList, "type": "com.froglogic.squish.awt.ListItemProxy"}
 

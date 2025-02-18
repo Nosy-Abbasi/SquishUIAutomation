@@ -19,6 +19,10 @@ def fill_booking_form(data):
     
     Enter_Text(Time,data["Time"])
     
+    Click(DD_ComboBox, "Drop-down for Calendar - Day")
+    
+    Click(list_12_ListItem, "Day as 12")
+    
     Enter_Text(Train_Name,data["Train Name"])
     
     Enter_Text(Starting_From,data["Starting From"])
