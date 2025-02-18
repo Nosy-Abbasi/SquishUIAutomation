@@ -22,12 +22,12 @@
     
     "CancleButton": [
         {
-            "Full Name": "Test",
-            "Email": "Test.com",
+            "Full Name": "Test2",
+            "Email": "Test.com2",
             "Time": "10",
-            "Train Name": "Test Train",
-            "Starting From": "Test Source",
-            "Destination": "Test Destination"
+            "Train Name": "Test Train2",
+            "Starting From": "Test Source2",
+            "Destination": "Test Destination2"
         }
     ]
 }

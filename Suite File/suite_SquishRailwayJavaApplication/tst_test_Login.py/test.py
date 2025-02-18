@@ -5,11 +5,8 @@ source(findFile("scripts", "CommonFunctions.py"))
 source(findFile("scripts", "GVariables.py"))
 
 def main():
-    # Load test data from JSON file
-    json_file_path = LoginJSON
     
-    with open(json_file_path, "r", encoding="utf-8") as file:
-        data = json.load(file)
+    data = data_load(LoginJSON)
     
     def test_login():
     # Loop through the tickets data

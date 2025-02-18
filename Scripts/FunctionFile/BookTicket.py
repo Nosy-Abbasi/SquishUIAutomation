@@ -4,56 +4,42 @@ from squish import *
 import sys
 import os
 
-import names
-import BookingTicketLocators
+source(findFile("scripts", "BookingTicketLocator.py"))
 
 
 def fill_booking_form(data):
     # Fill out the booking form with data
-    Click(BookingTicketLocators.book_Tickets,"Booking button")
+    Click(book_Tickets,"Booking button")
     
-    Enter_Text(BookingTicketLocators.Full_Name,data["Full Name"])
+    Enter_Text(Full_Name,data["Full Name"])
     
-    Enter_Text(BookingTicketLocators.Email_Id,data["Email"])
+    Enter_Text(Email_Id,data["Email"])
     
-    Click(BookingTicketLocators.Day_RadioButton," Radio button - Shift - Day")
+    Click(Day_RadioButton," Radio button - Shift - Day")
     
-    Enter_Text(BookingTicketLocators.Time,data["Time"])
+    Enter_Text(Time,data["Time"])
     
-    Enter_Text(BookingTicketLocators.Train_Name,data["Train Name"])
+    Enter_Text(Train_Name,data["Train Name"])
     
-    Enter_Text(BookingTicketLocators.Starting_From,data["Starting From"])
+    Enter_Text(Starting_From,data["Starting From"])
     
-    Enter_Text(BookingTicketLocators.Destination,data["Destination"])
+    Enter_Text(Destination,data["Destination"])
     
-    Click(BookingTicketLocators.Add_Button,"Add button")
     
-    Click(BookingTicketLocators.Yes_Button,"Yes button")
+def Save_Booking(data):
     
-    Text_Verification(BookingTicketLocators.message_Ticket_is_booked_sucessfully,data["Expected Message"])
+    Click(Add_Button,"Add button")
+    
+    Click(Yes_Button,"Yes button")
+    
+    Text_Verification(message_Ticket_is_booked_sucessfully,data["Expected Message"])
 
 
-def Cancle_button_Working(data):
+def Cancel_button_Working():
     
-    Click(BookingTicketLocators.book_Tickets,"Booking button")
+    Click(Add_Button,"Add button")
     
-    Enter_Text(BookingTicketLocators.Full_Name,data["Full Name"])
-    
-    Enter_Text(BookingTicketLocators.Email_Id,data["Email"])
-    
-    Click(BookingTicketLocators.Day_RadioButton," Radio button - Shift - Day")
-    
-    Enter_Text(BookingTicketLocators.Time,data["Time"])
-    
-    Enter_Text(BookingTicketLocators.Train_Name,data["Train Name"])
-    
-    Enter_Text(BookingTicketLocators.Starting_From,data["Starting From"])
-    
-    Enter_Text(BookingTicketLocators.Destination,data["Destination"])
-    
-    Click(BookingTicketLocators.Add_Button,"Add button")
-    
-    Click(BookingTicketLocators.No_Button,"No button")
+    Click(No_Button,"No button")
     
     test.passes("Test Passed")
     

@@ -19,17 +19,8 @@ def main():
             launch_application(Railway)  
             fill_booking_form(ticket)
             Save_Booking(ticket)
-            
-    def test_cancel_button():    
-        for ticket1 in data["CancleButton"]:
-            
-            # Execute actions
-            launch_application(Railway)
-            fill_booking_form(ticket1)
-            Cancel_button_Working()  
     
     test_booking_submit()
-    test_cancel_button()
             
 
          

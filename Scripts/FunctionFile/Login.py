@@ -3,18 +3,19 @@ import json
 from squish import *
 import sys
 import os
-import LoginLocators
+
+source(findFile("scripts", "LoginLocator.py"))
 
 
 def LoginFunctionlity(data):
     
-    Click(LoginLocators.admin_Login,"Booking button")
+    Click(admin_Login,"Booking button")
     
-    Enter_Text(LoginLocators.Admin_ID,data["Admin ID"])
+    Enter_Text(Admin_ID,data["Admin ID"])
     
-    Enter_Text(LoginLocators.Password,data["Password"])
+    Enter_Text(Password,data["Password"])
     
-    Click(LoginLocators.Login,"Login Button")
+    Click(Login,"Login Button")
     
-    Text_Verification(LoginLocators.Wrong_Username_Password,data["Expected Message"])
+    Text_Verification(Wrong_Username_Password,data["Expected Message"])
     
