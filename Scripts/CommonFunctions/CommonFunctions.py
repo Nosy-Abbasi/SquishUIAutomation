@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-  
 import json
 from squish import *
+import squish
 import sys
 import os
 source(findFile("scripts", "GVariables.py"))
@@ -23,6 +24,17 @@ def launch_application(AppName):
         screenshot_path = os.path.join(screenshot_folder, "App_Launch_Failed.png")
         saveDesktopScreenshot(screenshot_path)
         test.fatal(f"Error occurred while launching the application: {e}")
+        raise
+    
+def Close_Application(AppName):
+    try:
+        os.system("taskkill /F /IM " + AppName)
+        snooze(0.3)
+        test.log("App Closed Successfully")
+    except Exception as e:
+        screenshot_path = os.path.join(screenshot_folder, "App_Closed_Failed.png")
+        saveDesktopScreenshot(screenshot_path)
+        test.fatal(f"Error occurred while Closing the application: {e}")
         raise
 
     

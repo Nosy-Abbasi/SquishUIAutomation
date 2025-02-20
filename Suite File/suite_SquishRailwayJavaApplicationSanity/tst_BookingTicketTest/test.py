@@ -19,6 +19,7 @@ def main():
             launch_application(Railway)  
             fill_booking_form(ticket)
             Save_Booking(ticket)
+            Close_Application(Railway)
     
     test_booking_submit()
             

@@ -15,6 +15,7 @@ def main():
             # Execute actions
             launch_application(Railway)  
             LoginFunctionlity(ticket)
+            Close_Application(Railway)
             
     #Calling Functions        
     test_login()

@@ -20,6 +20,7 @@ def main():
                 launch_application(Railway)  
                 fill_booking_form(ticket)
                 Save_Booking(ticket)
+                Close_Application(Railway)
             
     
     
@@ -27,7 +28,8 @@ def main():
         for ticket1 in data["CancleButton"]:
                 launch_application(Railway)
                 fill_booking_form(ticket1)
-                Cancel_button_Working()  
+                Cancel_button_Working()
+                Close_Application(Railway) 
 
     allure.testcase("Test101", "Booking Submit")
     test_booking_submit()
