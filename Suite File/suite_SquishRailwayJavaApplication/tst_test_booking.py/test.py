@@ -10,7 +10,7 @@ source(findFile("scripts", "GVariables.py"))
 
 def main():
 
-    allure.suite("Booking Functionlity")
+    allure.suite("Booking Functionality")
 
     data = data_load(BookTicketJSON)
 
