@@ -16,7 +16,6 @@ def data_load(FileName):
     
 def launch_application(AppName):
     try:
-        # Start the application
         startApplication(AppName)
         snooze(0.3)
         test.log("App Launch Successfully")

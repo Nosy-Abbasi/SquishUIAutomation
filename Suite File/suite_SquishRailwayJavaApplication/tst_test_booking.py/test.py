@@ -10,8 +10,6 @@ source(findFile("scripts", "GVariables.py"))
 
 def main():
 
-    allure.suite("Booking Functionality")
-
     data = data_load(BookTicketJSON)
 
     
@@ -31,7 +29,5 @@ def main():
                 Cancel_button_Working()
                 Close_Application(Railway) 
 
-    allure.testcase("Test101", "Booking Submit")
     test_booking_submit()
-    allure.testcase("Test102", "Booking Cancel")
     test_cancel_button()

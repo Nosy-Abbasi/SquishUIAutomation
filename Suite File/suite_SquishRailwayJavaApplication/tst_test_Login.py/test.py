@@ -9,13 +9,11 @@ def main():
     data = data_load(LoginJSON)
     
     def test_login():
-    # Loop through the tickets data
+
         for ticket in data["Login"]:
-            
-            # Execute actions
+
             launch_application(Railway)  
             LoginFunctionlity(ticket)
             Close_Application(Railway)
-            
-    #Calling Functions        
+     
     test_login()
