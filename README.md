@@ -62,8 +62,8 @@ A hybrid test automation framework built using [Squish](https://www.froglogic.co
 
 3. **Clone this Repository**
    ```bash
-   git clone https://github.com/yourusername/squish-java-hybrid-framework.git
-   cd squish-java-hybrid-framework
+   git clone (https://github.com/Nosy-Abbasi/SquishUIAutomation)
+   cd SquishUIAutomation
 
 ## Project Structure
 
